@@ -18,4 +18,4 @@ Q4)Write a query that selects all customers whose names begin with the letter â€
 ans:->select * from customers cname like 'c%';
 
 Q5)Write a query that selects all orders except those with zeroes or NULLs in the amt field.
-ans:->
+ans:->select * from orders where amt!='NULL' and amt!=0;
