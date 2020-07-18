@@ -1,0 +1,12 @@
+# Assignment 3
+
+Name-Akshay Nemade
+Roll no-200240520014
+
+   Q1)does ANSI recognize the data type date?
+    ---> yes
+   
+
+   Q2) Which subdivision of sql is used to insert values in table?
+    ---> DML(data manipulation language) subdivision
+    
