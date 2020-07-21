@@ -28,4 +28,5 @@ Q6) Write a query that counts the number of salespeople registering orders for e
 ANS:-
 SELECT count(snum) "no of salespeople",odate,snum
 FROM orders
-GROUP BY odate;
+GROUP BY odate
+ORDER BY Total_orders desc;
