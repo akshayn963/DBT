@@ -30,9 +30,11 @@ Q9)Display the count of Projects going on in different cities.
 ANS:-select count(`j#`),city from j group by city;
 
 Q10)What is the difference between COUNT(Status) and COUNT(*) ?
- COUNT(Status)
+ANS:-
+
+COUNT(Status)
  ------------:
-ANS:-COUNT(Status) evaluates the expression for each row in a set and returns the number of rows having a non-null values.
+COUNT(Status) evaluates the expression for each row in a set and returns the number of rows having a non-null values.
 	
  COUNT(*):
  --------
