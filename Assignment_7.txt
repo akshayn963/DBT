@@ -26,6 +26,6 @@ ANS:-SELECT max(rating),city FROM customers group by city ;
 
 Q6) Write a query that counts the number of salespeople registering orders for each day. (If a salesperson has more than one order on a given day, he or she should be counted only once.).
 ANS:-
-SELECT count(snum) "no of salespeople",odate,snum
+SELECT count(odate) "no of salespeople",odate,snum
 FROM orders
 GROUP BY odate;
