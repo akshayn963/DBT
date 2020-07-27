@@ -1,0 +1,50 @@
+EXERCISE NO 06
+NAME:-AKSHAY NEMADE
+ROLL NO:-200240520014
+
+1) Display all the Suppliers with the same Status as the supplier, ‘CLARK’. 
+ANS:-	select sname , status
+	from s
+	where status = (select status from s where sname = 'CLARK');
+
+
+2) Display all the Employees in the same department as the employee ‘MILLER’
+ANS:-
+	select * from semp
+	where deptno = ( select deptno from semp where empname = 'Miller');
+
+3) Display all the Parts which have more Weight than all the Red parts.
+ ANS:-   select * from semp;
+	where deptno = ( select deptno from semp where empname = 'Miller');
+
+4) Display all the Projects going on in the same city as the project ‘TAPE’. 
+ANS:-	select * from j
+	where city = (select city from j where jname = 'TAPE');
+
+5) Display all the Parts with Weight less than all the Green parts. 
+ANS:-	select * from p
+	where weight < (select weight from p where color = 'green');
+
+6. Display the name of the Supplier who has sold the maximum Quantity (in one
+sale). 
+ANS:-	select s.sname
+	from s,spj
+	where s.`s#`=spj.`s#` and qty = (select max(qty) from spj);
+
+7) Display the name of the Employee with the minimum Salary. 
+ANS:-	select empname from semp
+	where sal = (select min(sal) from semp); 
+
+8) Display the name of the Supplier who has sold the maximum overall Quantity (sum
+of Sales). 
+ANS:-	select s.sname , sum(spj.qty)  
+ 	from s, spj
+ 	where spj.`s#`=spj.`s#` 
+	group by sname;
+
+9) Display the name of the Department with the maximum number of Employees. 
+ANS:-	select  sdept.deptname, count(semp.deptno) 
+ 	from semp, sdept 
+	where semp.deptno = sdept.deptno 
+	group by semp.deptno 
+	order by employees desc limit 1;

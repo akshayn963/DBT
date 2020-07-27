@@ -1,0 +1,75 @@
+Exercise no :-5
+Name:- Akshay Nemade
+Roll no:-200240520014
+
+1) Display the Supplier name and the Quantity sold. 
+ANS:-
+select sname,qty
+from s,spj
+where s.`s#`=spj.`s#`;
+
+2)Display the Part name and Quantity sold.
+ANS:-
+select pname,qty
+from p,spj
+where p.`p#`=spj.`p#`;
+
+3) Display the Project name and Quantity sold. 
+ANS:-
+select jname,qty
+from j,spj
+where j.`j#`=spj.`j#`;
+
+4) Display the Supplier name, Part name, Project name and Quantity sold
+ANS:-
+select sname,pname,jname,qty
+from s,p,j,spj
+where p.`p#`=spj.`p#` 
+and  s.`s#`=spj.`s#` 
+and j.`j#`=spj.`j#`;
+
+5)Display the Supplier name, Supplying Parts to a Project in the same City. 
+ANS:-
+select sname,pname from s,p,j
+	where s.city = j.city group by sname;
+
+6)Display the Part name that is ‘Red’ is color, and the Quantity sold. 
+ANS:-
+select pname,qty
+from p,spj
+where color='red'
+and p.`p#`=spj.`p#`;
+
+7)Display all the Quantity sold by Suppliers with the Status = 20. 
+ANS:-
+select qty
+from s,spj
+where status=20
+and s.`s#`=spj.`s#`;
+
+8)Display all the Parts and Quantity with a Weight > 14.
+ANS:-
+select pname,qty
+ from p,spj
+ where weight>14
+ and p.`p#`=spj.`p#`;
+ 
+ 9)Display all the Project names and City, which has bought more than 500 Parts. 
+ANS:-
+ select jname,city
+ from j,spj
+ where qty>500
+ and j.`j#`=spj.`j#`;
+ 
+ 10)Display all the Part names and Quantity sold that have a Weight less than 15.
+
+ANS:- 
+select pname,qty
+ from p,spj
+ where weight<15
+ and p.`p#`=spj.`p#`;
+ 
+11)Display all the Employee names and the name of their Managers. 
+ANS:-
+select distinct a.ename, b.mrg from emp a , emp b
+	where a.mrg = b.mrg;
